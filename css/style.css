@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+body {
+    background-color: #52d57e;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-display: swipe;
+    height: 95vh;
+    display: grid;
+    place-items: center;
+}
+
+h2 {
+    font-weight: 100;
+}
+.content {
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1em;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    border: none;
+    border-radius: 2px;
+    padding: 0.5em 0.5em;
+}
+
+.formButton {
+    border: none;
+    border-radius: 2px;
+}
+
+.active {
+    fill: #52d57e;
+}
+
+.urna-container {
+    width: clamp(300px, 60vw, 600px);
+}
+
+.urna-svg {
+    width: 100%;
+}
+
+/* buttons */
+#retangle1, #retangle2, #retangle3, #retangle4, #retangle5, #retangle6, #retangle7, #retangle8, #retangle9, #retangle10 {
+    cursor: pointer;
+}
+
+#number1, #number2, #number3, #number4, #number5, #number6, #number7, #number8, #number9, #number10 {
+    cursor: pointer;
+} 
+
+
+#enviar {
+    cursor: pointer;
+}
