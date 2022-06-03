@@ -1,30 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-body {
-    background-color: #52d57e;
-    color: white;
-    font-family: 'Anton', sans-serif;
-    font-display: swipe;
-    height: 95vh;
-    display: grid;
-    place-items: center;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
+body {
+    background-color: #EFF0E8;
+    color: #50D67B;
+    font-family: 'Anton', sans-serif;
+    font-display: swipe;
+}
+
+h1,
 h2 {
     font-weight: 100;
 }
+
+h1 {
+    font-size: 2em;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+}
+
 .content {
-    display: flex;
+    display: grid;
     place-items: center;
     flex-direction: column;
     justify-content: center;
-}
-
-.form {
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 1em;
-    justify-content: center;
-    gap: 10px;
+    height: 100%;
+    gap: 3px;
+    margin-top: 1.5em;
 }
 
 input {
@@ -33,17 +44,13 @@ input {
     padding: 0.5em 0.5em;
 }
 
-.formButton {
-    border: none;
-    border-radius: 2px;
-}
-
 .active {
     fill: #52d57e;
 }
 
 .urna-container {
-    width: clamp(300px, 60vw, 600px);
+    width: clamp(300px, 80vw, 800px);
+    margin-top: 1em;
 }
 
 .urna-svg {
@@ -62,4 +69,28 @@ input {
 
 #enviar {
     cursor: pointer;
+}
+
+header {
+    width: 100vw;
+    height: 3.5em;
+    border-bottom: 1px solid rgba(64, 52, 52, 0.2);
+}
+
+.faixa-valores {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #33513B;
+}
+
+.faixa-valores li {
+    list-style: none;
+}
+
+.faixa-valores img {
+    width: 32px;
+    height: 32px;
 }

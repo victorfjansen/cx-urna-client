@@ -2,12 +2,6 @@ import { store } from "../../context/configureStore/index.js";
 import getState from "../../utils/getState.js";
 import { emailInput } from "../../variables/formVariables.js";
 
-//Constructor de objeto que define o som que vai tocar
-const sound = new Howl({
-    src: getState("soundUrl"),
-    volume: 1.0
-});
-
 //funcao de post na api
 async function POST_VOTE (variables) {
     const response = await fetch("https://cx-urna.herokuapp.com/votos",  {
@@ -41,8 +35,11 @@ async function handleActionButton() {
                 nome_da_plataforma: getState("vote")
             })
             verifyCounter()
+            const sound = new Howl({
+                src: getState("soundUrl"),
+                volume: 1.0
+            });
             sound.play()
-            alert("Dados enviados com Sucesso!")
             store.dispatch({type: "UPDATE_COUNTER"})
         } catch(e) {
             alert("Algo deu errado! Tente novamente mais tarde")

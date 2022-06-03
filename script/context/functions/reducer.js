@@ -3,7 +3,7 @@ import { buttonList } from "../../utils/buttonList.js"
 const initialState = {
     vote: '',
     buttonList,
-    voteCounter: 4,
+    voteCounter: 0,
     soundUrl: "https://res.cloudinary.com/dibnenfot/video/upload/v1653441169/Som_de_Urna_Eletr%C3%B4nica_ma2cfz.mp3"
 }
 
