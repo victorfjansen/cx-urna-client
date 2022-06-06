@@ -94,3 +94,8 @@ header {
     width: 32px;
     height: 32px;
 }
+
+/* fim image */
+#fim {
+    display: none;
+}

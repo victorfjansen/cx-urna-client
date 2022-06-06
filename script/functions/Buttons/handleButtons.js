@@ -1,12 +1,13 @@
 import {store} from "../../context/configureStore/index.js"
+import getState from "../../utils/getState.js"
 import { voteText } from "../../variables/formVariables.js"
 
 function render() {
-    voteText.innerText = store.getState().vote
+    voteText.innerText = getState("vote")
 }
 
 function removeClass(){
-    Object.values(store.getState().buttonList).forEach((item) => {
+    Object.values(getState("buttonList")).forEach((item) => {
         const button = document.getElementById(item.id)
         button.classList.remove("active")
     })
@@ -26,7 +27,7 @@ function handleProcessButton(button){
 }
 
 export default function handleButtons() {
-    Object.values(store.getState().buttonList).forEach((button) => {
+    Object.values(getState("buttonList")).forEach((button) => {
         const selectedButton = document.getElementById(button.id)
         const selectedNumber = document.getElementById(button.numberClass)
         selectedButton.addEventListener("click", function() {
