@@ -1,4 +1,5 @@
 import {store} from "../../context/configureStore/index.js"
+import { UPDATE_VOTE } from "../../context/functions/reducer.js"
 import getState from "../../utils/getState.js"
 import { voteText } from "../../variables/formVariables.js"
 
@@ -22,7 +23,7 @@ function addClass(button) {
 function handleProcessButton(button){
     removeClass()
     store.subscribe(render)
-    store.dispatch({type: "UPDATE_VOTE", payload: button.value})
+    store.dispatch(UPDATE_VOTE(button.value))
     addClass(button)
 }
 

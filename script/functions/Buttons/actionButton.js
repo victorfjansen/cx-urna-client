@@ -1,10 +1,12 @@
 import { store } from "../../context/configureStore/index.js";
+import { RESET_COUNTER, UPDATE_COUNTER, UPDATE_SOUNDURL } from "../../context/functions/reducer.js";
 import getState from "../../utils/getState.js";
+import { baseUrl } from "../../variables/ambientVariables.js";
 import { emailInput, fimImage } from "../../variables/formVariables.js";
 
 //funcao de post na api
 async function POST_VOTE (variables) {
-    const response = await fetch("https://cx-urna.herokuapp.com/votos",  {
+    const response = await fetch(baseUrl,  {
         method: "POST",
         headers: {
             "Content-Type": "application/json; charset=utf-8",
@@ -16,10 +18,10 @@ async function POST_VOTE (variables) {
 
 function verifyCounter() {
     if(getState("voteCounter") <= 6) {
-        store.dispatch({type: "UPDATE_SOUNDURL", payload: "https://res.cloudinary.com/dibnenfot/video/upload/v1653441169/Som_de_Urna_Eletr%C3%B4nica_ma2cfz.mp3"})
+        store.dispatch(UPDATE_SOUNDURL("https://res.cloudinary.com/dibnenfot/video/upload/v1653441169/Som_de_Urna_Eletr%C3%B4nica_ma2cfz.mp3"))
     } else {
-        store.dispatch({type: "UPDATE_SOUNDURL", payload: "https://res.cloudinary.com/dibnenfot/video/upload/v1654017884/urna-mateus_lwvxdj.mp4"})
-        store.dispatch({type: "RESET_COUNTER"})
+        store.dispatch(UPDATE_SOUNDURL("https://res.cloudinary.com/dibnenfot/video/upload/v1654017884/urna-mateus_lwvxdj.mp4"))
+        store.dispatch(RESET_COUNTER())
     }
 }
 
@@ -37,7 +39,7 @@ async function handleActionButton() {
                 volume: 1.0
             });
             sound.play()
-            store.dispatch({type: "UPDATE_COUNTER"})
+            store.dispatch(UPDATE_COUNTER())
             fimImage.style.display = "block"
         } catch(e) {
             if(e == "TypeError: Failed to fetch") alert("Estamos com problemas no nosso servidor 😢 Aguarde alguns segundos e tente novamente!")
