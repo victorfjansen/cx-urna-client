@@ -1,52 +1,52 @@
 export const buttonList = {
     1: {
         id: "retangle1",
-        value: "Opção 1",
+        value: "EURECA",
         numberClass: "number1"
     },
     2: {
         id: "retangle2",
-        value: "Opção 2",
+        value: "PICPEDIA",
         numberClass: "number2"
     },
     3: {
         id: "retangle3",
-        value: "Opção 3",
+        value: "CX MIND",
         numberClass: "number3"
     },
     4: {
         id: "retangle4",
-        value: "Opção 4",
+        value: "SEARCH",
         numberClass: "number4"
     },
     5: {
         id: "retangle5",
-        value: "Opção 5",
+        value: "HORUS",
         numberClass: "number5"
     },
     6: {
         id: "retangle6",
-        value: "Opção 6",
+        value: "PORTAL DO CONHECIMENTO",
         numberClass: "number6"
     },
     7: {
         id: "retangle7",
-        value: "Opção 7",
+        value: "BRAIN",
         numberClass: "number7"
     },
     8: {
         id: "retangle8",
-        value: "Opção 8",
+        value: "WIKIPAY",
         numberClass: "number8"
     },
     9: {
         id: "retangle9",
-        value: "Opção 9",
+        value: "CX-TUDO",
         numberClass: "number9"
     },
     10: {
         id: "retangle10",
-        value: "Manuelito Brabo 😎",
+        value: "JARVIS",
         numberClass: "number10"
     }
 }
